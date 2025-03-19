@@ -1,0 +1,13 @@
+package com.example.SpringSecurity.RESTAPI.service;
+
+import com.example.SpringSecurity.RESTAPI.dto.UserDTO;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public UserDTO createUser(UserDTO userDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

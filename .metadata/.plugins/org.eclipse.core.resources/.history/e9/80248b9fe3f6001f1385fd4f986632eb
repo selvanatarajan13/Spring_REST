@@ -1,0 +1,27 @@
+package com.example.SpringSecurity.RESTAPI.service;
+
+import org.springframework.beans.BeanUtils;
+
+import com.example.SpringSecurity.RESTAPI.dto.UserDTO;
+import com.example.SpringSecurity.RESTAPI.entity.UserEntity;
+import com.example.SpringSecurity.RESTAPI.dto.*;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public UserDTO createUser(UserDTO userDTO) {
+		
+		UserEntity userEntity = new UserEntity();
+		
+		BeanUtils.copyProperties(userDTO, userEntity);
+		
+		userEntity.setUserId("abc123");
+		userEntity.setEncryptedPassword("$#afsdf45");
+		
+		UserDTO userDTO = new UserDTO();
+		BeanUtils.copyProperties(userEntity, userDTO);
+		
+		return userDTO;
+	}
+
+}

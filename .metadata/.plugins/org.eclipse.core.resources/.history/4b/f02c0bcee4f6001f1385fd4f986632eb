@@ -1,0 +1,22 @@
+package com.example.SpringSecurity.RESTAPI.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@RestController
+@RequestMapping("users")
+public class FunRestController {
+	
+	@GetMapping()
+	public String getMethod() {
+		return "This endpoint return a GET method";
+	}
+	
+	@PostMapping()
+	public String addUser() {
+		return "This endpoint return a add user method";
+	}
+	
+}

@@ -1,0 +1,9 @@
+spring.application.name=02-Spring-Security-UserSignUp-SignIn
+
+# configure mysql db
+spring.datasource.url= jdbc:mysql:http://localhost:8080/restapi_db;
+spring.datasource.username= mahend@localhost
+spring.datasource.password= mahend
+spring.jpa.hibernate.ddl-auto= update
+
+spring.main.banner-mode= off
